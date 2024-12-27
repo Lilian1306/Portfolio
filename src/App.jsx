@@ -1,9 +1,10 @@
-
+import React from "react"
+import Home from "./Pages/Home/HomeScreen"
 
 function App() {
   return (
     <div>
-      Hola Mundo
+      <Home/>
     </div>
   )
 }
