@@ -1,15 +1,16 @@
-import { projecs2 } from "../utils/Data";
+import { Link } from "react-router-dom";
+import { projecs } from "../utils/Data";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 
-const Proyectos = () => {
+const AllProjects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
-    <div className=" flex items-center justify-center  min-h-screen pt-20 pb-2  text-backgroundDark dark:text-textDark dark:bg-backgroundDark bg-lines3 bg-cover bg-center ">
-      <div className="px-10 flex flex-col gap-10 max-sm:gap-0">
-      <h1 className="text-4xl text-center uppercase font-extrabold max-sm:text-base max-2xl:text-base">
+    <div className=" flex items-center justify-center  min-h-screen text-backgroundDark dark:text-textDark bg-lines4 bg-cover bg-center  ">
+      <div className="px-10 flex flex-col items-center justify-center gap-10 max-sm:gap-1">
+        <h1 className="text-4xl text-center uppercase font-extrabold max-sm:text-base max-2xl:text-base ">
           Proyectos
         </h1>
         <motion.div
@@ -17,12 +18,12 @@ const Proyectos = () => {
           initial={{ opacity: 0, x: -200 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="flex flex-wrap justify-center gap-6 items-center max-sm:gap-6 pb-2 "
+          className="flex flex-wrap justify-center gap-6 items-center max-sm:gap-4  "
         >
-          {projecs2.map((project) => (
+          {projecs.map((project) => (
             <div
               key={project.id}
-              className="product-card  rounded-md shadow-xl overflow-hidden relative cursor-pointer  shrink-0 py-8 px-6 bg-white flex flex-col items-center justify-center gap-3 transition-all duration-300 group dark:backdrop-blur-sm  border border-gray-800  dark:border-gray-700 dark:bg-gray-100 dark:hover:bg-gray-200"
+              className="product-card  rounded-md shadow-xl overflow-hidden relative cursor-pointer  shrink-0 py-8 px-6  flex flex-col items-center justify-center gap-3 transition-all duration-300 group   bg-backgroundDark/10 backdrop-blur-sm dark:backdrop-blur-sm dark:bg-white/5 border border-gray-800 hover:bg-backgroundDark/20 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900 "
             >
               <div className="absolute -left-[40%] top-0 group-hover:rotate-12 transition-all duration-300 group-hover:scale-150">
                 <div className="flex gap-1">
@@ -41,23 +42,23 @@ const Proyectos = () => {
                   </svg>
                 </div>
               </div>
-              <div className="absolute rounded-full  bg-backgroundDark left-1/2 top-[44%] h-[110%] w-[110%] -translate-x-1/2 group-hover:top-[58%] transition-all duration-300"></div>
-              <div className="para uppercase text-center leading-none  z-10 ">
-                <p className="text-black font-semibold text-xs font-serif">
+              <div className="absolute rounded-full bg-backgroundDark left-1/2 top-[44%] h-[110%] w-[110%] -translate-x-1/2 group-hover:top-[58%] transition-all duration-300"></div>
+              <div className="para uppercase text-center leading-none  z-10">
+                <p className="text-backgroundDark dark:text-textDark font-semibold text-xs font-serif">
                   Proyecto
                 </p>
-                <p className="font-bold text-xl tracking-wider text-backgroundDark">
+                <p className="font-bold text-xl tracking-wider text-backgroundDark dark:text-textDark">
                   {project.title}
                 </p>
               </div>
               <div className="img w-[180px] aspect-square  z-10 rounded-md">
                 <img src={project.img} />
               </div>
-              <div className="btm-_container z-40 flex flex-row justify-between items-end gap-10">
+              <div className="btm-_container z-40 flex flex-row justify-between items-end">
                 <div className="flex flex-col items-start gap-1">
                   <div className="flex flex-row gap-2">
                     <div className="inline-flex gap-3 items-center justify-center">
-                      <p className="font-semibold text-xs text-white w-44">
+                      <p className="font-semibold text-xs text-textDark dark:text-textDark w-44">
                         {project.description}
                       </p>
                     </div>
@@ -67,9 +68,15 @@ const Proyectos = () => {
             </div>
           ))}
         </motion.div>
+        <Link
+          to="/portafolio"
+          className="bg-secondaryDark text-textDark px-4 py-2 my-4 rounded-md"
+        >
+          Ver mas proyectos
+        </Link>
       </div>
     </div>
   );
 };
 
-export default Proyectos;
+export default AllProjects;

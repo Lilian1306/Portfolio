@@ -3,23 +3,24 @@ import { developers } from "../utils/Data";
 
 const Team = () => {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-4 ">
+    <div className="flex flex-wrap items-center justify-center gap-4">
       {developers.map((developer) => (
         <div
           key={developer.id}
-          className="flex flex-col items-center py-3 w-32 h-40  rounded-md shadow-lg bg-black text-white dark:bg-white dark:text-black"
+          className="flex flex-col items-center py-3 w-32 h-40  rounded-md shadow-lg bg-backgroundDark/10 backdrop-blur-sm dark:backdrop-blur-sm dark:bg-white/5 border border-gray-800 hover:bg-backgroundDark/20 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900"
         >
           <section className="flex justify-center items-center w-10 h-14 rounded-full shadow-md bg-gradient-to-r from-[#5fa9db] to-[#d5d8e2] hover:from-[#C9A9E9] hover:to-[#176474] hover:cursor-pointer hover:scale-110 duration-300">
             <img src={developer.img} className="w-6 fill-gray-700" />
           </section>
 
-          <section className="block border-t border-gray-300 my-3 text-center">
+          <section className="block border-t border-gray-500 my-3 text-center text-backgroundDark dark:text-textDark ">
             <div className="py-3">
-              <h3 className=" font-semibold text-sm">{developer.name}</h3>
+              <h3 className=" font-semibold text-sm ">{developer.name}</h3>
               <h3 className=" text-xs font-bold">{developer.profesion}</h3>
             </div>
             <Link
               to={developer.github}
+              target=" _blank"
               className="flex items-center justify-center"
             >
               <svg

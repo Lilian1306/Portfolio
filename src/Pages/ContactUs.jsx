@@ -1,27 +1,73 @@
-import logotipo from "../assets/hero.webp";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { contact, socialMedia } from "../utils/Data";
+import logo from "../assets/logo2.png";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
-    <div className=" flex items-center justify-center  min-h-screen text-black dark:text-white bg-gradient-to-r from-white to-white dark:from-[#080e1c] dark:to-[#0c1d36]  ">
-      <div className="flex flex-row gap-10 items-center max-sm:flex-col">
-        <div className="flex flex-col gap-4 max-sm:text-center font-prince2">
-          <p className="text-2xl max-2xl:text-lg">Hola</p>
-          <span className="text-lg text-start max-sm:text-xs max-2xl:text-base max-md:text-end">
-            - El principito
-          </span>
-        </div>
-        <div className="flex flex-row items-center relative font-prince ">
-          <div className="flex flex-col absolute">
-            <span className="text-xl text-end">Paginas web </span>
+    <div className="flex items-center justify-center min-h-screen w-full  text-backgroundDark dark:text-textDark dark:bg-backgroundDark bg-lines3 bg-cover bg-center ">
+      <div className=" flex flex-row items-center justify-center max-sm:flex-col px-10 max-sm:px-2 ">
+        <div className="flex flex-col gap-10 items-center justify-center ">
+          <div className="flex flex-row gap-10 items-center justify-center">
+            {contact.map((contactos) => (
+              <div
+                key={contactos.id}
+                className="flex flex-col max-sm:flex-col gap-10 items-center justify-center relative px-10 "
+              >
+                <motion.div
+                  ref={ref}
+                  initial={{ opacity: 0, y: 70 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8 }}
+                >
+                  <div className="flex flex-row items-center justify-center gap-2">
+                    {" "}
+                    <img src={contactos.img} alt="" className="w-8 h-8" />
+                    <p className="text-3xl font-extrabold max-2xl:text-lg">
+                      {contactos.title}
+                    </p>
+                  </div>
+                  <span className=" w-full text-base flex items-end justify-end text-end  max-sm:text-xs max-2xl:text-base ">
+                    {contactos.description}
+                  </span>
+                </motion.div>
+              </div>
+            ))}
           </div>
-          <img
-            src={logotipo}
-            alt=""
-            width={250}
-            height={150}
-            className="items-end justify-end dark:drop-shadow-[0_5px_35px_#8b8a8a] dark:delay-200 dark:transition-all"
-          />
+
+          <div className="flex flex-row gap-10 max-sm:gap-6 items-center justify-center">
+            {socialMedia.map((social) => (
+              <Link key={social.id} to={social.link} target="_blank">
+                <motion.div
+                  initial={{ opacity: 0, y: -70 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8 }}
+                  className="flex flex-col gap-2 items-center justify-center"
+                >
+                  <div>{social.title}</div>
+                  <img src={social.img} alt="" className="w-4 h-4" />
+                </motion.div>
+              </Link>
+            ))}
+          </div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -200 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="w-full items-center justify-center flex pt-20 "
+        >
+          <img
+            src={logo}
+            alt="Hero"
+            className=" max-sm:h-32 dark:drop-shadow-[0_5px_35px_#8b8a8a] dark:delay-200 dark:transition-all"
+          />
+        </motion.div>
       </div>
     </div>
   );
