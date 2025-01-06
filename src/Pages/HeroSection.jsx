@@ -1,24 +1,25 @@
 import { motion } from "framer-motion";
-import AboutUs from "../components/AboutUs";
-import Portfolio from "./Portfolio";
-import Proyectos from "./Proyectos";
-import Servicios from "./Servicios";
+import { lazy } from "react";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 2 },
   visible: { opacity: 10, y: 0, transition: { duration: 0.8 } },
 };
+const AboutUs = lazy(() => import("../components/AboutUs"));
+const InfoServicios = lazy(() => import("../components/InfoServicios"));
+const AllProjects = lazy(() => import("../components/AllProjects"));
+const Inicio = lazy(() => import("./Inicio"));
 
-export default function HeroSection() {
+const HeroSection = () => {
   return (
-    <div className="min-h-screen flex flex-col space-y-10 text-black dark:text-white bg-white dark:bg-black">
+    <div className="min-h-screen flex flex-col dark:bg-backgroundDark bg-textDark   ">
       <motion.div
         variants={fadeUpVariant}
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.2 }}
       >
-        <Portfolio />
+        <Inicio />
       </motion.div>
 
       <motion.div
@@ -36,7 +37,7 @@ export default function HeroSection() {
         whileInView="visible"
         viewport={{ amount: 0.2 }}
       >
-        <Servicios />
+        <InfoServicios />
       </motion.div>
 
       <motion.div
@@ -45,8 +46,10 @@ export default function HeroSection() {
         whileInView="visible"
         viewport={{ amount: 0.2 }}
       >
-        <Proyectos />
+        <AllProjects />
       </motion.div>
     </div>
   );
-}
+};
+
+export default HeroSection;

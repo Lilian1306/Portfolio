@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 
-const Portfolio = () => {
+const Inicio = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false }); // Cambia `once` a `false` para detectar múltiples entradas al viewport
 
@@ -14,19 +14,19 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="flex justify-center min-h-screen w-full text-black dark:text-white bg-gradient-to-r from-white to-white dark:from-[#080e1c] dark:to-[#0c1d36]">
+    <div className="flex justify-center min-h-screen w-full text-backgroundDark dark:text-textDark bg-lines3 bg-cover bg-center ">
       <div
         className="flex flex-col gap-10 items-center justify-center max-sm:flex-col px-10"
         ref={ref}
       >
         <motion.div
-          className="flex flex-col items-center relative "
+          className="flex flex-col items-center relative  "
           initial={{ opacity: 0, x: -200 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
           key={isInView ? "visible" : "hidden"} // Fuerza el remount cuando cambia `isInView`
         >
-          <div className="flex flex-col justify-center items-center gap-4 text-center max-sm:text-center">
+          <div className="flex flex-col justify-center items-center gap-4 text-center max-sm:text-center ">
             <div className="overflow-hidden">
               <motion.h1
                 initial="hidden"
@@ -34,9 +34,9 @@ const Portfolio = () => {
                 variants={MULTIDIRECTION_SLIDE_VARIANTS}
                 transition={{ duration: 1 }}
               >
-                <p className="text-7xl max-2xl:text-4xl max-sm:text-lg font-bold upp">
+                <p className="text-7xl max-2xl:text-4xl max-sm:text-lg font-bold  ">
                   Bienvenido a{" "}
-                  <span className="bg-gradient-to-r from-purple-500 to-purple-900 bg-clip-text text-transparent">Web Tech TT</span> donde
+                  <span className="text-secondaryDark ">Web Tech TT</span> donde
                   creamos
                 </p>
               </motion.h1>
@@ -48,8 +48,8 @@ const Portfolio = () => {
                 transition={{ duration: 1 }}
                 className=" h-24"
               >
-                <p className="text-7xl max-2xl:text-4xl font-bold  max-sm:text-lg">
-                 paginas web a tu medida
+                <p className="text-7xl max-2xl:text-4xl font-bold  max-sm:text-lg ">
+                  paginas web a tu medida
                 </p>
               </motion.h1>
             </div>
@@ -61,7 +61,7 @@ const Portfolio = () => {
 
             <Link
               to="/contactanos"
-              className="bg-slate-600 text-xs text-white dark:bg-white dark:text-black px-2 rounded-lg py-2 text-center uppercase font-bold"
+              className=" text-xs text-textDark bg-secondaryDark px-2 rounded-lg py-2 text-center uppercase font-bold"
             >
               Contactanos
             </Link>
@@ -72,4 +72,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Inicio;

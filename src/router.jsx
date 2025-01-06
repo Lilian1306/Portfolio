@@ -1,18 +1,22 @@
+import { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HeroSection from "./Pages/HeroSection";
-import Servicios from "./Pages/Servicios";
-import Portfolio from "./Pages/Portfolio";
-import ContactUs from "./Pages/ContactUs";
-import Navbar from "./Pages/Navbar";
+import ScrollToTop from "./utils/ScrollToTop";
+
+const Navbar = lazy(() => import("./Pages/Navbar"));
+const HeroSection = lazy(() => import("./Pages/HeroSection"));
+const Servicios = lazy(() => import("./Pages/Servicios"));
+const Proyectos = lazy(() => import("./Pages/Proyectos"));
+const ContactUs = lazy(() => import("./Pages/ContactUs"));
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<Navbar />}>
           <Route path="/" element={<HeroSection />} />
           <Route path="/servicios" element={<Servicios />} />
-          <Route path="/portafolio" element={<Portfolio />} />
+          <Route path="/portafolio" element={<Proyectos />} />
           <Route path="/contactanos" element={<ContactUs />} />
         </Route>
       </Routes>
