@@ -29,9 +29,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="logo"
-              width={50}
-              height={50}
-              className="dark:drop-shadow-[0_3px_10px_#ffffff] dark:delay-200 dark:transition-all"
+              className="dark:drop-shadow-[0_3px_10px_#ffffff] dark:delay-200 dark:transition-all max-sm:w-8 max-sm:h-8 w-10 h-10"
             />
           </button>
           <div className="flex justify-center items-center gap-6 text-base max-sm:text-xs max-sm:gap-3 font-prince2">
