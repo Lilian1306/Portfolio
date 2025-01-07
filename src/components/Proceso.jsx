@@ -8,7 +8,7 @@ const Proceso = () => {
   const isInView = useInView(ref);
   return (
     <div className="flex  items-center justify-center gap-10 pt-10 ">
-      <div className="px-10 flex flex-col gap-10 max-sm:gap-0 max-sm:px-2">
+      <div className="px-10 flex flex-col gap-10 max-sm:gap-0">
         <h1 className="text-4xl text-center uppercase font-extrabold max-sm:text-base max-2xl:text-base ">
           proceso
         </h1>
@@ -22,9 +22,9 @@ const Proceso = () => {
           {proceso.map((process) => (
             <div
               key={process.id}
-              className="flex flex-row px-2 md:max-w-xl items-center bg-white/50 backdrop-blur-md border border-gray-200 rounded-lg shadow  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+              className="flex flex-row pl-2 md:max-w-xl items-stretch bg-white/50 backdrop-blur-md border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
             >
-              <div className="flex flex-col justify-between py-4 leading-normal">
+              <div className="flex-[2] flex flex-col justify-between py-4 leading-normal">
                 <h5 className="mb-2 uppercase text-2xl max-sm:text-base font-bold tracking-tight text-gray-900 dark:text-white">
                   {process.title}
                 </h5>
@@ -32,11 +32,13 @@ const Proceso = () => {
                   {process.description}
                 </p>
               </div>
-              <img
-                className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 max-sm:w-20 max-sm:h-20"
-                src={process.img}
-                alt=""
-              />
+              <div className="flex-[1] rounded-tr-lg rounded-br-lg dark:bg-gray-700 bg-blue-200 flex items-center">
+                <img
+                  className="object-contain h-40 w-full rounded-lg"
+                  src={process.img}
+                  alt=""
+                />
+              </div>
             </div>
           ))}
         </motion.div>

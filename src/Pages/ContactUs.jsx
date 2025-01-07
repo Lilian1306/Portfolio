@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { contact, socialMedia } from "../utils/Data";
+import { contact } from "../utils/Data";
 import logo from "../assets/logo2.png";
 import { Link } from "react-router-dom";
+import { links } from "../utils/SocialLinks";
+import SocialMedia from "../components/SocialMedia";
 
 const ContactUs = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
-    <div className="flex items-center justify-center min-h-screen w-full  text-backgroundDark dark:text-textDark dark:bg-backgroundDark bg-lines3 bg-cover bg-center ">
+    <div className="flex items-center justify-center min-h-screen w-full  text-backgroundDark dark:text-textDark dark:bg-backgroundDark bg-lines3 bg-cover bg-center bg-textDark ">
       <div className=" flex flex-row items-center justify-center max-sm:flex-col px-10 max-sm:px-2 ">
         <div className="flex flex-col gap-10 items-center justify-center ">
           <div className="flex flex-row gap-10 items-center justify-center">
@@ -27,7 +29,7 @@ const ContactUs = () => {
                   <div className="flex flex-row items-center justify-center gap-2">
                     {" "}
                     <img src={contactos.img} alt="" className="w-8 h-8" />
-                    <p className="text-3xl font-extrabold max-2xl:text-lg">
+                    <p className="text-lg font-extrabold uppercase max-2xl:text-lg max-sm:text-xs">
                       {contactos.title}
                     </p>
                   </div>
@@ -39,17 +41,21 @@ const ContactUs = () => {
             ))}
           </div>
 
-          <div className="flex flex-row gap-10 max-sm:gap-6 items-center justify-center">
-            {socialMedia.map((social) => (
-              <Link key={social.id} to={social.link} target="_blank">
+          <div className="flex flex-row gap-6 max-sm:gap-6 items-center justify-center">
+            {links.map((social, index) => (
+              <Link key={index} to={social.to} target="_blank">
                 <motion.div
                   initial={{ opacity: 0, y: -70 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8 }}
-                  className="flex flex-col gap-2 items-center justify-center"
                 >
-                  <div>{social.title}</div>
-                  <img src={social.img} alt="" className="w-4 h-4" />
+                  <SocialMedia
+                    key={index}
+                    to={social.to}
+                    svgPath={social.svgPath}
+                    className="w-7 h-10 dark:text-textDark text-backgroundDark"
+                    title={social.title}
+                  />
                 </motion.div>
               </Link>
             ))}
@@ -74,3 +80,12 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+/*        {links.map((link, index) => (
+          <SocialMedia
+            key={index}
+            to={link.to}
+            svgPath={link.svgPath}
+            className="w-7 h-10 dark:text-textDark text-backgroundDark"
+          />
+        ))}*/

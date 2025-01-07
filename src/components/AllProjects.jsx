@@ -23,7 +23,7 @@ const AllProjects = () => {
           {projecs.map((project) => (
             <div
               key={project.id}
-              className="product-card  rounded-md shadow-xl overflow-hidden relative cursor-pointer  shrink-0 py-8 px-6  flex flex-col items-center justify-center gap-3 transition-all duration-300 group   bg-backgroundDark/10 backdrop-blur-sm dark:backdrop-blur-sm dark:bg-white/5 border border-gray-800 hover:bg-backgroundDark/20 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900 "
+              className="product-card  rounded-md shadow-xl overflow-hidden relative cursor-pointer  shrink-0 py-8 px-6  flex flex-col w-80 h-96  items-center justify-center gap-3 transition-all duration-300 group   bg-backgroundDark/10 backdrop-blur-sm dark:backdrop-blur-sm dark:bg-white/5 border border-gray-200 hover:bg-backgroundDark/20 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900 "
             >
               <div className="absolute -left-[40%] top-0 group-hover:rotate-12 transition-all duration-300 group-hover:scale-150">
                 <div className="flex gap-1">
@@ -54,11 +54,11 @@ const AllProjects = () => {
               <div className="img w-[180px] aspect-square  z-10 rounded-md">
                 <img src={project.img} />
               </div>
-              <div className="btm-_container z-40 flex flex-row justify-between items-end">
+              <div className="btm-_container z-40 flex flex-row justify-between ">
                 <div className="flex flex-col items-start gap-1">
                   <div className="flex flex-row gap-2">
                     <div className="inline-flex gap-3 items-center justify-center">
-                      <p className="font-semibold text-xs text-textDark dark:text-textDark w-44">
+                      <p className="font-semibold text-xs text-center text-textDark dark:text-textDark w-44">
                         {project.description}
                       </p>
                     </div>
@@ -70,7 +70,7 @@ const AllProjects = () => {
         </motion.div>
         <Link
           to="/portafolio"
-          className="bg-secondaryDark text-textDark px-4 py-2 my-4 rounded-md"
+          className="bg-primaryDark text-textDark px-4 py-2 my-4 rounded-md"
         >
           Ver mas proyectos
         </Link>

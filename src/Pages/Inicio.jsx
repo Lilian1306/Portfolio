@@ -36,7 +36,7 @@ const Inicio = () => {
               >
                 <p className="text-7xl max-2xl:text-4xl max-sm:text-lg font-bold  ">
                   Bienvenido a{" "}
-                  <span className="text-secondaryDark ">Web Tech TT</span> donde
+                  <span className="text-secondaryDark ">Web Tech T</span> donde
                   creamos
                 </p>
               </motion.h1>
@@ -61,7 +61,7 @@ const Inicio = () => {
 
             <Link
               to="/contactanos"
-              className=" text-xs text-textDark bg-secondaryDark px-2 rounded-lg py-2 text-center uppercase font-bold"
+              className=" text-xs text-textDark bg-primaryDark px-2 rounded-lg py-2 text-center uppercase font-bold"
             >
               Contactanos
             </Link>
