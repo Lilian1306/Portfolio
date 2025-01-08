@@ -3,22 +3,25 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { contact } from "../utils/Data";
 import logo from "../assets/logo.webp";
+import logo2 from "../assets/logo2.webp";
 import { Link } from "react-router-dom";
 import { links } from "../utils/SocialLinks";
 import SocialMedia from "../components/SocialMedia";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const ContactUs = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
+  const { colorTheme } = useDarkMode();
   return (
     <div className="flex items-center justify-center min-h-screen w-full  text-backgroundDark dark:text-textDark dark:bg-backgroundDark bg-lines3 bg-cover bg-center bg-textDark ">
-      <div className=" flex flex-row items-center justify-center max-sm:flex-col px-10 max-sm:px-2 ">
+      <div className=" flex flex-row items-center justify-center max-sm:flex-col px-10 max-sm:px-2 gap-4 ">
         <div className="flex flex-col gap-10 items-center justify-center ">
           <div className="flex flex-row gap-10 items-center justify-center">
             {contact.map((contactos) => (
               <div
                 key={contactos.id}
-                className="flex flex-col max-sm:flex-col gap-10 items-center justify-center relative px-10 "
+                className="flex flex-col max-sm:flex-col items-center justify-center relative px-10 "
               >
                 <motion.div
                   ref={ref}
@@ -28,8 +31,12 @@ const ContactUs = () => {
                 >
                   <div className="flex flex-row items-center justify-center gap-2">
                     {" "}
-                    <img src={contactos.img} alt="" className="w-8 h-8" />
-                    <p className="text-lg font-extrabold uppercase max-2xl:text-lg max-sm:text-xs">
+                    <img
+                      src={contactos.imgDark}
+                      alt=""
+                      className="w-8 h-8 max-sm:w-6 max-sm:h-4 "
+                    />
+                    <p className="text-sm font-extrabold uppercase max-2xl:text-lg max-sm:text-xs">
                       {contactos.title}
                     </p>
                   </div>
@@ -69,9 +76,9 @@ const ContactUs = () => {
           className="w-full items-center justify-center flex pt-20 "
         >
           <img
-            src={logo}
+            src={`${colorTheme === "dark" ? logo : logo2}`}
             alt="Hero"
-            className=" max-sm:h-32 dark:drop-shadow-[0_5px_35px_#8b8a8a] dark:delay-200 dark:transition-all"
+            className=" max-sm:h-32 max-sm:w-32 w-96 h-96"
           />
         </motion.div>
       </div>

@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.webp";
+import logo2 from "../assets/logo2.webp";
 import SocialMedia from "./SocialMedia";
 import { links } from "../utils/SocialLinks";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const Footer = () => {
   const navigate = useNavigate();
+    const {colorTheme } = useDarkMode()
 
   const handleClick = () => {
     navigate("/");
@@ -15,9 +18,9 @@ const Footer = () => {
       <div className="flex flex-row items-center justify-between w-full max-sm:flex-row">
         <button onClick={handleClick}>
           <img
-            src={logo}
+           src={`${colorTheme === "dark" ? logo : logo2}`}
             alt="Logo"
-            className=" w-10 h-10 max-sm:w-8 max-sm:h-8 dark:drop-shadow-[0_3px_10px_#ffffff] dark:delay-200 dark:transition-all"
+            className=" w-10 h-10 max-sm:w-8 max-sm:h-8  "
           />
         </button>
         <div className="flex flex-row gap-4">
