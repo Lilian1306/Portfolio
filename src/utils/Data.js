@@ -1,4 +1,6 @@
 import webtech from "../assets/logo.webp";
+import webtech2 from "../assets/logo2.webp";
+/*unDraw images*/
 import pwp from "../assets/professionalwebsite.svg";
 import mw from "../assets/maintenanceweb.svg";
 import dh from "../assets/domainhost.svg";
@@ -21,6 +23,7 @@ import guitar from "../assets/guitar.png";
 import drinks from "../assets/drinks.png";
 import store from "../assets/e-commerce.png";
 import bts from "../assets/bts.png";
+import gmail from "../assets/gmail.webp";
 
 export const services = [
   {
@@ -191,10 +194,11 @@ export const aboutus = [
     title: "TTech Designers",
     title2: "desarollo web",
     description:
-      "Agencia de diseño web, somos un grupo de emprendedores especializados en el desarrollo y diseño de sitios web, tiendas online, Blogs, Branding, Redes Sociales, SEO y más... Ofrecemos la mejor consultoría web y soluciones creativas y efectivas que se adaptan a cada modelo de negocio y presupuesto.",
-    img: webtech,
-    phrase:
-      "Mis acciones estratégicas siempre están guiadas por las necesidades de mis clientes, a quienes apoyo y asesoro para lograr su exitosa presencia en la web.",
+      "Agencia de desarrollo y diseño web. Somos un grupo de emprendedores especializados en el desarrollo y diseño de sitios web, tiendas online, Blogs, Branding, SEO y más... Ofrecemos la mejor consultoría web y soluciones creativas y efectivas que se adaptan a cada modelo de negocio y presupuesto.",
+    imgDark: webtech,
+    imgWhite: webtech2,
+    phrase: "Si puedes imaginarlo, puedes programarlo",
+    author: "Alejandro Taboada",
   },
 ];
 
@@ -210,7 +214,7 @@ export const contact = [
     id: 2,
     title: "Correo electronico",
     description: "ttechdesigners@gmail.com",
-    img: webtech,
+    imgDark: gmail,
   },
 ];
 
@@ -269,23 +273,23 @@ export const characteristics = [
 export const proceso = [
   {
     id: 1,
-    title: "Reunión con el cliente",
+    title: "Reunion con el cliente",
     description:
-      "Reunión con el cliente para conocer sus necesidades, objetivos, que tipo de sitio web es necesitada, describir en sus propias palabras su negocio diseño, etc.",
+      "Agendamos una cita para conocer tus necesidades, objetivos y que tipo de sitio web necesitas. Describiendo en tus propias palabras tu negocio, el diseño, etc.",
     img: meeting,
   },
   {
     id: 2,
     title: "Busqueda y Analysis",
     description:
-      "Invesitgamos, Analisamos tus competidores, nuevas tendencias en la industria para crear una estrategia y adaptarlo a tu sitio web",
+      "Invesitgamos y analizamos tus competidores, nuevas tendencias en la industria para crear una estrategia y adaptarlo a tu sitio web",
     img: research,
   },
   {
     id: 3,
     title: "Diseño web",
     description:
-      "Envianos algunos ejemplos de como quieres tu sitio web, y nosotros lo adecuamos para que sea atractivo y fácil de navegar con el contenido de tu negocio",
+      "Envianos algunos ejemplos de como quieres tu sitio web, lo adecuamos para que sea atractivo y fácil de navegar con el contenido de tu negocio",
     img: dr,
   },
   {
@@ -299,7 +303,7 @@ export const proceso = [
     id: 5,
     title: "Pruebas y correcciones",
     description:
-      "Pruebas y correcciones de tu sitio web, para asegurarnos de que todo funcione correctamente y se vea bien en diferentes dispositivos.",
+      "Iniciamos el proceso de pruebas y correcciones de tu sitio web, para asegurarnos de que todo funcione correctamente y se vea bien en diferentes dispositivos.",
     img: test,
   },
   {

@@ -1,13 +1,16 @@
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.webp";
+import logo2 from "../assets/logo2.webp";
 import { usePage } from "../hooks/usePage";
 import Footer from "../components/Footer";
 import Switcher from "../utils/Switcher";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { isScrolled } = usePage();
+  const {colorTheme } = useDarkMode()
 
   const handleLogoClick = () => {
     navigate("/");
@@ -26,10 +29,11 @@ const Navbar = () => {
           }`}
         >
           <button onClick={handleLogoClick}>
+            
             <img
-              src={logo}
+              src={`${colorTheme === "dark" ? logo : logo2}`}
               alt="logo"
-              className="dark:drop-shadow-[0_3px_10px_#ffffff] dark:delay-200 dark:transition-all max-sm:w-8 max-sm:h-8 w-10 h-10"
+              className=" max-sm:w-8 max-sm:h-8 w-8 h-8"
             />
           </button>
           <div className="flex justify-center items-center gap-6 text-base max-sm:text-xs max-sm:gap-3 font-prince2">

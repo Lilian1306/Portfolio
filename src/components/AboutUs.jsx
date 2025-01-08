@@ -1,12 +1,14 @@
+//import Team from "./Team";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { aboutus } from "../utils/Data";
-import Team from "./Team";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const AboutUs = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
+  const { colorTheme } = useDarkMode();
 
   return (
     <div className="flex items-center justify-center min-h-screen w-full dark:text-textDark text-primaryDark bg-lines4 bg-cover bg-center ">
@@ -26,9 +28,11 @@ const AboutUs = () => {
               className="w-full items-center justify-center flex "
             >
               <img
-                src={about.img}
+                src={`${
+                  colorTheme === "dark" ? about.imgDark : about.imgWhite
+                }`}
                 alt="Hero"
-                className=" max-sm:h-16 dark:drop-shadow-[0_5px_35px_#8b8a8a] dark:delay-200 dark:transition-all"
+                className=" w-96 h-96 max-sm:h-20 max-sm:w-20 "
               />
             </motion.div>
 
@@ -38,18 +42,18 @@ const AboutUs = () => {
               transition={{ duration: 0.8 }}
               className="w-full flex flex-col gap-2 items-center justify-center"
             >
-              <p className="text-3xl font-extrabold max-2xl:text-lg   dark:text-secondaryLight">
-                <span className="  text-secondaryDark">{about.title} </span>{" "}
-                {about.title2}
+              <p className="text-5xl font-extrabold max-2xl:text-lg uppercase  dark:text-secondaryLight">
+                <span className="  text-secondaryDark">{about.title} </span>
               </p>
-              <span className=" text-base text-center  max-sm:text-xs max-2xl:text-base ">
+              <span className=" text-xl text-center  max-sm:text-sm max-2xl:text-base ">
                 {about.description}
               </span>
-              {/* <div className=" text-textDark w-96 max-sm:w-72 max-sm:px-10 text-xs px-20 rounded-lg py-2 text-center font-bold backdrop-blur-md  bg-backgroundDark dark:backdrop-blur-sm dark:bg-white/5 border border-gray-800 hover:bg-slate-900 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900 ">
-                <p>{about.phrase}</p>
-              </div> */}
-              <h1 className="text-2xl font-bold text-center">Nuestro equipo</h1>
-              <Team /> {/* This is optional */}
+              <div className=" text-textDark w-96 max-sm:w-72 max-sm:px-10 text-base px-20 rounded-lg py-2 text-center font-bold backdrop-blur-md  bg-backgroundDark dark:backdrop-blur-md dark:bg-backgroundDark/20 border border-gray-800 hover:bg-slate-900 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900 ">
+                <p> &quot;{about.phrase} &quot;</p>
+                <span className="text-xs text-end">- {about.author}</span>
+              </div>
+              {/* <h1 className="text-2xl font-bold text-center">Nuestro equipo</h1>
+              <Team />  This is optional */}
             </motion.div>
           </div>
         ))}
