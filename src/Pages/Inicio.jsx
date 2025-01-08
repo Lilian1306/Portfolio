@@ -36,7 +36,7 @@ const Inicio = () => {
               >
                 <p className="text-7xl max-2xl:text-4xl max-sm:text-lg font-bold  ">
                   Bienvenido a{" "}
-                  <span className="text-secondaryDark ">Web Tech T</span> donde
+                  <span className="text-secondaryDark ">TTech Designers</span> donde
                   creamos
                 </p>
               </motion.h1>

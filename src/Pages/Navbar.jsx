@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
-import logo from "../assets/logo2.png";
+import logo from "../assets/logo.webp";
 import { usePage } from "../hooks/usePage";
 import Footer from "../components/Footer";
 import Switcher from "../utils/Switcher";
