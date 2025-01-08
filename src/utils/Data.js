@@ -1,4 +1,4 @@
-import webtech from "../assets/logo2.png";
+import webtech from "../assets/logo.webp";
 import pwp from "../assets/professionalwebsite.svg";
 import mw from "../assets/maintenanceweb.svg";
 import dh from "../assets/domainhost.svg";
@@ -188,7 +188,7 @@ export const developers = [
 export const aboutus = [
   {
     id: 1,
-    title: "Web Tech TT",
+    title: "TTech Designers",
     title2: "desarollo web",
     description:
       "Agencia de diseño web, somos un grupo de emprendedores especializados en el desarrollo y diseño de sitios web, tiendas online, Blogs, Branding, Redes Sociales, SEO y más... Ofrecemos la mejor consultoría web y soluciones creativas y efectivas que se adaptan a cada modelo de negocio y presupuesto.",
@@ -209,7 +209,7 @@ export const contact = [
   {
     id: 2,
     title: "Correo electronico",
-    description: "google@gmail.com",
+    description: "ttechdesigners@gmail.com",
     img: webtech,
   },
 ];

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { contact } from "../utils/Data";
-import logo from "../assets/logo2.png";
+import logo from "../assets/logo.webp";
 import { Link } from "react-router-dom";
 import { links } from "../utils/SocialLinks";
 import SocialMedia from "../components/SocialMedia";
