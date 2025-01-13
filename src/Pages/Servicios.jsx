@@ -31,7 +31,7 @@ const Servicios = () => {
                 <img
                   className=" object-contain h-48 w-full max-sm:h-28 rounded-lg "
                   src={service.img}
-                  alt="service"
+                  alt="Services Images"
                 />
               </div>
 

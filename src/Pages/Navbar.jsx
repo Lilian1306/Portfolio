@@ -32,7 +32,7 @@ const Navbar = () => {
             
             <img
               src={`${colorTheme === "dark" ? logo : logo2}`}
-              alt="logo"
+              alt="logo Navbar"
               className=" max-sm:w-8 max-sm:h-8 w-8 h-8"
             />
           </button>

@@ -31,7 +31,7 @@ const AboutUs = () => {
                 src={`${
                   colorTheme === "dark" ? about.imgDark : about.imgWhite
                 }`}
-                alt="Hero"
+                alt="Hero Logo Dark and White"
                 className=" w-96 h-96 max-sm:h-20 max-sm:w-20 "
               />
             </motion.div>
