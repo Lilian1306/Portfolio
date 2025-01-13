@@ -33,7 +33,7 @@ const ContactUs = () => {
                     {" "}
                     <img
                       src={contactos.imgDark}
-                      alt=""
+                      alt="contact"
                       className="w-8 h-8 max-sm:w-6 max-sm:h-4 "
                     />
                     <p className="text-sm font-extrabold uppercase max-2xl:text-lg max-sm:text-xs">
