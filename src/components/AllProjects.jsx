@@ -52,7 +52,7 @@ const AllProjects = () => {
                 </p>
               </div>
               <div className="img w-[180px] aspect-square  z-10 rounded-md">
-                <img src={project.img} />
+                <img src={project.img} alt="project" />
               </div>
               <div className="btm-_container z-40 flex flex-row justify-between ">
                 <div className="flex flex-col items-start gap-1">
