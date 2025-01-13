@@ -28,7 +28,7 @@ const InfoServicios = () => {
                 <div>
                   <img
                     src={service.img}
-                    alt={service.title}
+                    alt="Diverse Services"
                     className=" h-auto "
                   />
                 </div>

@@ -36,7 +36,7 @@ const Proceso = () => {
                 <img
                   className="object-contain h-40 w-full rounded-lg"
                   src={process.img}
-                  alt="process"
+                  alt="Step Process"
                 />
               </div>
             </div>

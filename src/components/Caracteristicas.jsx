@@ -14,7 +14,7 @@ const Caracteristicas = () => {
               className="flex flex-wrap gap-10 justify-center items-center p-4  border border-gray-300 rounded-lg backdrop-blur-md shadow md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
             >
               <div className="flex flex-col gap-4 justify-center items-center w-80 h-60">
-                <img src={characteristic.img} alt="characteristic" className="w-40 h-20" />
+                <img src={characteristic.img} alt="Images for Characteristic by unDraw" className="w-40 h-20" />
                 <h1 className="text-2xl max-sm:text-base text-center uppercase font-extrabold ">
                   {characteristic.title}
                 </h1>

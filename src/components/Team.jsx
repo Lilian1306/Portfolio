@@ -10,7 +10,7 @@ const Team = () => {
           className="flex flex-col items-center py-3 w-32 h-40  rounded-md shadow-lg bg-backgroundDark/10 backdrop-blur-sm dark:backdrop-blur-md dark:bg-white/5 border border-gray-200 hover:bg-backgroundDark/20 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900"
         >
           <section className="flex justify-center items-center w-10 h-14 rounded-full shadow-md bg-gradient-to-r from-[#5fa9db] to-[#d5d8e2] hover:from-[#C9A9E9] hover:to-[#176474] hover:cursor-pointer hover:scale-110 duration-300">
-            <img src={developer.img} alt="developer" className="w-6 fill-gray-700" />
+            <img src={developer.img} alt="Git Img Developer" className="w-6 fill-gray-700" />
           </section>
 
           <section className="block border-t border-gray-500 my-3 text-center text-backgroundDark dark:text-textDark ">
