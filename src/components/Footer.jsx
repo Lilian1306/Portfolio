@@ -19,7 +19,7 @@ const Footer = () => {
         <button onClick={handleClick}>
           <img
            src={`${colorTheme === "dark" ? logo : logo2}`}
-            alt="Logo Footer"
+            alt="TTech Designer Logo Footer"
             className=" w-10 h-10 max-sm:w-8 max-sm:h-8  "
           />
         </button>

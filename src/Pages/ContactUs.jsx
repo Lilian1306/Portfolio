@@ -33,7 +33,7 @@ const ContactUs = () => {
                     {" "}
                     <img
                       src={contactos.imgDark}
-                      alt="Contact Dark Image"
+                      alt="TTech Designer Contact"
                       className="w-8 h-8 max-sm:w-6 max-sm:h-4 "
                     />
                     <p className="text-sm font-extrabold uppercase max-2xl:text-lg max-sm:text-xs">
@@ -77,7 +77,7 @@ const ContactUs = () => {
         >
           <img
             src={`${colorTheme === "dark" ? logo : logo2}`}
-            alt="Hero Logo Dark and White"
+            alt="TTech Designer Logo Dark and White"
             className=" max-sm:h-32 max-sm:w-32 w-96 h-96"
           />
         </motion.div>
