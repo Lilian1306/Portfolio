@@ -25,9 +25,9 @@ const Proceso = () => {
               className="flex flex-row pl-2 md:max-w-xl items-stretch bg-white/50 backdrop-blur-md border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
             >
               <div className="flex-[2] flex flex-col justify-between py-4 leading-normal">
-                <h5 className="mb-2 uppercase text-2xl max-sm:text-base font-bold tracking-tight text-gray-900 dark:text-white">
+                <h1 className="mb-2 uppercase text-2xl max-sm:text-base font-bold tracking-tight text-gray-900 dark:text-white">
                   {process.title}
-                </h5>
+                </h1>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 max-sm:text-xs">
                   {process.description}
                 </p>
