@@ -1,4 +1,4 @@
-import { Card, Typography } from "@material-tailwind/react";
+import { Card } from "@material-tailwind/react";
 import { services } from "../utils/Data";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
@@ -34,13 +34,12 @@ const InfoServicios = () => {
                 </div>
 
                 <div className=" flex items-center text-center justify-center uppercase font-extrabold pt-4 ">
-                  <Typography
-                    variant="h5"
+                  <div
                     color="blue-gray"
                     className="font-medium text-center dark:text-textDark"
                   >
                     {service.title}
-                  </Typography>
+                  </div>
                 </div>
               </Card>
             </Link>

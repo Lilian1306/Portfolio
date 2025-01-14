@@ -36,9 +36,9 @@ const Servicios = () => {
               </div>
 
               <div className="flex-[2] flex flex-col justify-between py-4 pl-2 ">
-                <h5 className="mb-2 uppercase text-2xl max-sm:text-xs font-bold text-gray-900 dark:text-white ">
+                <h1 className="mb-2 uppercase text-2xl max-sm:text-xs font-bold text-gray-900 dark:text-white ">
                   {service.title}
-                </h5>
+                </h1>
                 <p className="mb-3 font-normal max-sm:text-xs text-gray-700 dark:text-gray-400">
                   {service.description}
                 </p>

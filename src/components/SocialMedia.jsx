@@ -8,7 +8,7 @@ const SocialMedia = ({ to, svgPath, className, title }) => {
         <h1 className="uppercase text-backgroundDark dark:text-textDark font-bold max-sm:text-xs">
           {title}
         </h1>
-        <Link to={to} target="_blank" rel="noopener noreferrer">
+        <Link to={to} target="_blank" rel="noopener noreferrer"  aria-label={`Enlace a ${title}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
