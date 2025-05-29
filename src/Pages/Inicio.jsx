@@ -16,7 +16,7 @@ const Inicio = () => {
   return (
     <div className="flex justify-center min-h-screen w-full text-backgroundDark dark:text-textDark bg-lines3 bg-cover bg-center ">
       <div
-        className="flex flex-col gap-10 items-center justify-center max-sm:flex-col px-10"
+        className="flex flex-col gap-10 items-center justify-center max-sm:flex-col mx-10"
         ref={ref}
       >
         <motion.div
