@@ -18,8 +18,8 @@ const InfoServicios = () => {
         <motion.div
           ref={ref}
           className="flex flex-wrap gap-10 max-sm:gap-4 justify-center items-center"
-          initial={{ opacity: 0, y: 70 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0, x: 200 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
           {services.map((service) => (
