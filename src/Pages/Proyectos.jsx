@@ -15,8 +15,8 @@ const Proyectos = () => {
         </h1>
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, x: -200 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          initial={{ opacity: 0, y: 70 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="flex flex-wrap justify-center gap-6 items-center max-sm:gap-6 pb-2 "
         >
@@ -63,7 +63,7 @@ const Proyectos = () => {
                       </p>
                     </div>
                     <div className="flex flex-col items-center justify-between">
-                      <Link to={project.demo} target="_blank"  >
+                      <Link to={project.demo} target="_blank">
                         <svg
                           data-testid="geist-icon"
                           viewBox="0 0 16 16"
