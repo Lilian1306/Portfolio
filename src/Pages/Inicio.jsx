@@ -7,11 +7,11 @@ const Inicio = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false }); // Cambia `once` a `false` para detectar múltiples entradas al viewport
 
-  const MULTIDIRECTION_SLIDE_VARIANTS = {
-    hidden: { opacity: 0, x: "-25vw" },
-    visible: { opacity: 1, x: 0 },
-    right: { opacity: 0, x: "25vw" },
-  };
+  // const MULTIDIRECTION_SLIDE_VARIANTS = {
+  //   hidden: { opacity: 0, x: "-25vw" },
+  //   visible: { opacity: 1, x: 0 },
+  //   right: { opacity: 0, x: "25vw" },
+  // };
 
   return (
     <div className="flex justify-center min-h-screen w-full text-backgroundDark dark:text-textDark bg-lines3 bg-cover bg-center ">
@@ -21,8 +21,8 @@ const Inicio = () => {
       >
         <motion.div
           className="flex flex-col items-center relative  "
-          initial={{ opacity: 0, x: -200 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          initial={{ opacity: 0, y: 70 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           key={isInView ? "visible" : "hidden"} // Fuerza el remount cuando cambia `isInView`
         >
@@ -31,20 +31,20 @@ const Inicio = () => {
               <motion.h1
                 initial="hidden"
                 animate="visible"
-                variants={MULTIDIRECTION_SLIDE_VARIANTS}
+                
                 transition={{ duration: 1 }}
               >
                 <p className="text-7xl max-2xl:text-4xl max-sm:text-lg font-bold  ">
                   Bienvenido a{" "}
-                  <span className="text-secondaryDark ">TTech Designers</span> donde
-                  creamos
+                  <span className="text-secondaryDark ">TTech Designers</span>{" "}
+                  donde creamos
                 </p>
               </motion.h1>
 
               <motion.h1
                 initial="right"
                 animate="visible"
-                variants={MULTIDIRECTION_SLIDE_VARIANTS}
+                
                 transition={{ duration: 1 }}
                 className=" h-24"
               >

@@ -22,8 +22,8 @@ const AboutUs = () => {
             className="flex flex-row max-sm:flex-col gap-10 items-center justify-center relative px-10"
           >
             <motion.div
-              initial={{ opacity: 0, x: -200 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, y: 70 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
               className="w-full items-center justify-center flex "
             >
