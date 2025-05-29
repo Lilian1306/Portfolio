@@ -13,7 +13,7 @@ const AboutUs = () => {
   return (
     <div className="flex items-center justify-center min-h-screen w-full dark:text-textDark text-primaryDark bg-lines4 bg-cover bg-center ">
       <div
-        className=" items-center justify-center max-sm:flex-col px-10 max-sm:px-2"
+        className=" items-center justify-center max-sm:flex-col mx-10 max-sm:px-2"
         ref={ref}
       >
         {aboutus.map((about) => (

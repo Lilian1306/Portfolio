@@ -11,7 +11,7 @@ const Servicios = () => {
 
   return (
     <div className="flex items-center pt-20 pb-2 justify-center min-h-screen text-backgroundDark dark:text-textDark dark:bg-backgroundDark bg-lines3 bg-cover bg-center bg-textDark  ">
-      <div className="px-10 flex flex-col items-center justify-center gap-10 max-sm:gap-5">
+      <div className="mx-10 flex flex-col items-center justify-center gap-10 max-sm:gap-5">
         <h1 className="text-4xl text-center uppercase font-extrabold max-sm:text-base max-2xl:text-base">
           Servicios
         </h1>
