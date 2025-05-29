@@ -22,7 +22,7 @@ const Navbar = () => {
     <>
       <div className="fixed top-0 w-full z-20 rounded-3xl">
         <div
-          className={`flex flex-row justify-between px-4 py-2 w-full absolute transition-all duration-300  gap-4 max-sm:gap-1 text-textLight dark:text-textDark max-sm:py-2   ${
+          className={`flex flex-row justify-between px-4 py-4 w-full max-sm:w-96 absolute transition-all duration-300  gap-4 max-sm:gap-1 text-textLight dark:text-textDark max-sm:py-2   ${
             isScrolled
               ? "bg-textDark dark:bg-black/10 backdrop-blur-xl shadow-md"
               : ""
