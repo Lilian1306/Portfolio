@@ -15,8 +15,8 @@ const AllProjects = () => {
         </h1>
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 70 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0, x: -200 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="flex flex-wrap justify-center gap-6 items-center max-sm:gap-4  "
         >
